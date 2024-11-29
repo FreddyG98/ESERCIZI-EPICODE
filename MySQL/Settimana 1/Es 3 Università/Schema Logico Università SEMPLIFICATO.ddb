@@ -1,0 +1,575 @@
+{
+  "author": "Unnamed",
+  "title": "Schema Logico Università",
+  "date": "2024-11-09T01:46:43.738Z",
+  "tables": [
+    {
+      "id": 0,
+      "name": "DIPARTIMENTI",
+      "x": -72.99999999999989,
+      "y": -390.00000000000006,
+      "fields": [
+        {
+          "name": "Nome dipartimento",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": false,
+          "comment": "PK",
+          "id": 0,
+          "size": 150
+        },
+        {
+          "name": "Indirizzo sede principale",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 150
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#f03c3c",
+      "key": 1731101851107
+    },
+    {
+      "id": 1,
+      "name": "CONTRATTI",
+      "x": -631.0000000000002,
+      "y": -389,
+      "fields": [
+        {
+          "name": "IdContratto",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "PK",
+          "id": 0
+        },
+        {
+          "name": "Nome dipartimento",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 1,
+          "size": 150
+        },
+        {
+          "name": "IdDocente",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1731102136829
+    },
+    {
+      "id": 2,
+      "name": "DOCENTI",
+      "x": -1133,
+      "y": -398.99999999999994,
+      "fields": [
+        {
+          "name": "IdDocente",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "PK",
+          "id": 0
+        },
+        {
+          "name": "Nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 150
+        },
+        {
+          "name": "Data nascita",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "Specializzazione",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": 150
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#f03c3c",
+      "key": 1731102155164
+    },
+    {
+      "id": 3,
+      "name": "CATTEDRE",
+      "x": -1134,
+      "y": -13.000000000000057,
+      "fields": [
+        {
+          "name": "IdCattedra",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "PK",
+          "id": 0
+        },
+        {
+          "name": "IdDocente",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "IdCorso",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1731102155976
+    },
+    {
+      "id": 4,
+      "name": "CORSI",
+      "x": -1139,
+      "y": 355.0000000000001,
+      "fields": [
+        {
+          "name": "IdCorso",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "PK",
+          "id": 0
+        },
+        {
+          "name": "CFU Totali",
+          "type": "SMALLINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "Nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": 150
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#f03c3c",
+      "key": 1731102156456
+    },
+    {
+      "id": 5,
+      "name": "SEDI",
+      "x": -636,
+      "y": -38.00000000000023,
+      "fields": [
+        {
+          "name": "IdSede",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "PK",
+          "id": 0
+        },
+        {
+          "name": "Indirizzo sede",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 150
+        },
+        {
+          "name": "Nome dipartimento",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 2,
+          "size": 150
+        },
+        {
+          "name": "IdCorso",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 3,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1731102156841
+    },
+    {
+      "id": 6,
+      "name": "ESAMI",
+      "x": -636,
+      "y": 304.99999999999994,
+      "fields": [
+        {
+          "name": "IdEsame",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "PK",
+          "id": 0
+        },
+        {
+          "name": "Voto",
+          "type": "TINYINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "Data",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "CFU",
+          "type": "TINYINT",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 3,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "Matricola",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 4,
+          "size": "",
+          "values": []
+        },
+        {
+          "name": "IdCorso",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": false,
+          "notNull": true,
+          "increment": false,
+          "comment": "FK",
+          "id": 5,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#175e7a",
+      "key": 1731102157181
+    },
+    {
+      "id": 7,
+      "name": "STUDENTI",
+      "x": -129.99999999999983,
+      "y": 353.00000000000006,
+      "fields": [
+        {
+          "name": "Matricola",
+          "type": "INTEGER",
+          "default": "",
+          "check": "",
+          "primary": true,
+          "unique": true,
+          "notNull": true,
+          "increment": true,
+          "comment": "PK",
+          "id": 0
+        },
+        {
+          "name": "Nome",
+          "type": "VARCHAR",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 1,
+          "size": 150
+        },
+        {
+          "name": "Data di nascita",
+          "type": "DATE",
+          "default": "",
+          "check": "",
+          "primary": false,
+          "unique": false,
+          "notNull": false,
+          "increment": false,
+          "comment": "",
+          "id": 2,
+          "size": "",
+          "values": []
+        }
+      ],
+      "comment": "",
+      "indices": [],
+      "color": "#f03c3c",
+      "key": 1731102157529
+    }
+  ],
+  "relationships": [
+    {
+      "startTableId": 3,
+      "startFieldId": 1,
+      "endTableId": 2,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "DOCENTI_IdDocente_fk",
+      "id": 0
+    },
+    {
+      "startTableId": 3,
+      "startFieldId": 2,
+      "endTableId": 4,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "CORSI_IdCorso_fk",
+      "id": 1
+    },
+    {
+      "startTableId": 6,
+      "startFieldId": 5,
+      "endTableId": 4,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "CORSI_IdCorso_fk",
+      "id": 2
+    },
+    {
+      "startTableId": 6,
+      "startFieldId": 4,
+      "endTableId": 7,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "STUDENTI_Matricola_fk",
+      "id": 3
+    },
+    {
+      "startTableId": 1,
+      "startFieldId": 2,
+      "endTableId": 2,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "CONTRATTI_IdDocente_fk",
+      "id": 4
+    },
+    {
+      "startTableId": 1,
+      "startFieldId": 1,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "DIPARTIMENTI_Nome dipartimento_fk",
+      "id": 5
+    },
+    {
+      "startTableId": 5,
+      "startFieldId": 3,
+      "endTableId": 4,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "CORSI_IdCorso_fk",
+      "id": 6
+    },
+    {
+      "startTableId": 5,
+      "startFieldId": 2,
+      "endTableId": 0,
+      "endFieldId": 0,
+      "cardinality": "many_to_one",
+      "updateConstraint": "No action",
+      "deleteConstraint": "No action",
+      "name": "SEDI_Nome dipartimento_fk",
+      "id": 7
+    }
+  ],
+  "notes": [],
+  "subjectAreas": [
+    {
+      "id": 0,
+      "name": "Da 2 errori \"riferimento duplicato\" per le relazioni IdCorso",
+      "x": -162.92783877412865,
+      "y": -11.93304061453955,
+      "width": 231.32937278124984,
+      "height": 100.67004782031245,
+      "color": "#7c4af0"
+    }
+  ],
+  "database": "mysql"
+}
