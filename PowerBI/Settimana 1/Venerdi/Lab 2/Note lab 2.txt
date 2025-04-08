@@ -1,0 +1,9 @@
+Dopo il primo rilascio indispensabile per:  
+     a) valutare il soddisfacimento dei requisiti 
+     b) raccogliere feedback utili agli step successivi
+emerge una seconda richiesta.
+
+Il requisito è documentato come user story (approccio Agile):
+"In qualità di end-user e business analyst, è necessario disporre dei dati relativi ai reseller per poter filtrare le metriche in base ai reseller ed alle aree geografiche".
+
+L'azienda fornisce un'estrazione dell'anagrafica reseller.

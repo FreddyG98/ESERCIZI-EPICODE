@@ -1,0 +1,20 @@
+
+Il Data Analyst sviluppa soluzioni complete di Business Intelligence.
+Lo sviluppo tipicamente prevede le seguente fasi:
+1.      Comprensione dello scenario (analisi dei requisiti, individuazione delle sorgenti dati, esplorazione dati)
+2.      ETL: estrazione, trasformazione e caricamento del dato (in un modello logico)
+3.      Progettazione modello logico
+4.      Analisi e visualizzazione dati
+5.      Distribuzione e gestione della soluzione
+Le esercitazioni che seguiranno sono pensate per affrontare step-by-step le fasi di sviluppo.
+Le prime sono dedicate alla fasi 1 e 2 per arrivare gradualmente allo sviluppo di un modello e infine alla costruzione del report (Storytelling).
+Scenario
+
+BikesWorld è un’azienda che commercializza diversi modelli di biciclette, abbigliamento specifico e parti di ricambio in tutto il mondo.
+Occorre sviluppare una soluzione di BI che consenta all’azienda di analizzare i dati storici e monitorare l’andamento corrente delle vendite.
+L’azienda è interessata a quantificare le vendite in termini di Importo Totale, Numero Ordini, Numero di transazioni e Profitto.
+È necessario poter analizzare le metriche per prodotto.
+
+Scopo del laboratorio:
+- acquisizione delle tabelle utili alle analisi
+- profilazione, preparazione, pulizia e ristrutturazione delle stesse
